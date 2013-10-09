@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="{{ STATIC_URL }}ex2/app.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" >Bubble Sort</a>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="collapse navbar-collapse navbar-ex4-collapse">
+            <p class="navbar-text pull-right"><a href="{% url 'django.contrib.auth.views.logout_then_login' %}" class="navbar-link">Logout</a></p>
+        </div>
+        {% endif %}
+        </nav>
+        <div class="container">
+            {% block body %}{% endblock body%}
+        </div>
+
+    </body>
+</html>
+

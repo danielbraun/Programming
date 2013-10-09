@@ -1,0 +1,14 @@
+{% extends "ex2/base.html" %}
+{% load bootstrap %}
+
+{% block body %}
+<form method="POST">
+    <input type="hidden" name="next" value="{% url 'ex2.views.index' %}" />
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary" value="Login" />
+    </div>
+</form>
+{% endblock body %}
+

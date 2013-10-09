@@ -1,0 +1,12 @@
+{% extends "ex2/base.html" %}
+{% load bootstrap %}
+
+{% block body %}
+
+<form role="form">
+{{ form|bootstrap }}
+</form>
+
+<button class="btn btn-primary" id="sort_button">Sort</button>
+{% endblock body %}
+
