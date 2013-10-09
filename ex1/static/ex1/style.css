@@ -1,0 +1,23 @@
+header {
+    background-color: yellow;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    clear: both;
+    text-align: center;
+}
+
+aside {
+    width: 20%;
+    float: left;
+}
+
+section {
+    text-align: center;
+}
+section p {
+    text-align:left;
+}
